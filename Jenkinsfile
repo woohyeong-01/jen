@@ -47,8 +47,7 @@ spec:
 EOF"""
              sh "pwd"
              sh "ls"
-             sh "/home/ec2-user/kubectl version"
-             sh "/home/jenkins/./kubectl apply -f monthly_deploy.yaml"
+             sh "/var/lib/jenkins/./kubectl apply -f monthly_deploy.yaml"
              env.deployPodsResult=true
           }catch(error){
             print(error)
