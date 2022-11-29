@@ -14,7 +14,7 @@ pipeline {
                 script {
                     try {
                         git branch: 'main',
-                            credentialsId: 'git',
+                            credentialsId: 'git_credential',
                             url: 'https://github.com/woohyeong-01/jen'
                         sh "ls -lat"
                         pwd
