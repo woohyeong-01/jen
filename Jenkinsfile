@@ -50,7 +50,7 @@ EOF
         stage('Push to ECR'){
             steps {
               script {
-                docker.withRegistry("https://${ECR_PATH}", "ecr:ap-northeast-2:aws_credentials") {
+                docker.withRegistry("https://${ECR_PATH}", "ecr:ap-northeast-2:aws_credential") {
                     def image = docker.build("${ECR_PATH}/${ECR_IMAGE}:${env.BUILD_NUMBER}")
                         image.push()
                 }
