@@ -56,7 +56,7 @@ EOF
                 }
 
                 echo 'Remove Deploy Files'
-                sh "sudo rm -rf /var/lib/jenkins/workspace/${env.JOB_NAME}/*"
+                sh "rm -rf /var/lib/jenkins/workspace/${env.JOB_NAME}/*"
                 env.dockerBuildResult=true
               }
             }
